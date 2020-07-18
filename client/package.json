@@ -10,11 +10,13 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "tailwindcss": "^1.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "tailwind:css": "tailwind build src/styles/tailwind.src.css -c  tailwind.config.js -o src/styles/tailwind.css",
+    "start": "npm run tailwind:css && react-scripts start",
+    "build": "npm run tailwind:css && react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
